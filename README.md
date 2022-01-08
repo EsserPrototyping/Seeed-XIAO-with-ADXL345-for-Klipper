@@ -28,28 +28,23 @@ ___________________________________________________
 # Configure the MCU - Seeeduino XIAO
 
 Original instructions... https://github.com/Tircown/ERCF-easy-brd
-___________________________________________________
 
 Install bossac (version =1.8):
 
 ```
 sudo apt install libreadline-dev libwxgtk3.0-*
-
 git clone https://github.com/shumatech/BOSSA.git
-
 cd BOSSA
 make
-
 sudo cp bin/bossac /usr/local/bin
 ```
 
-___________________________________________________
 
 Prepare the firmware:
-
+```
 cd ~/klipper
 make menuconfig
-
+```
 ___________________________________________________
 
 - uncheck extra low-level options
@@ -60,9 +55,10 @@ ___________________________________________________
 - Communication: USB
 ___________________________________________________
 
+```
 make clean
 make
-
+```
 ___________________________________________________
 
 - Short reset two times on Xiao ( orange led on )
@@ -70,60 +66,43 @@ ___________________________________________________
 More informations on how to reset for flashing:
 https://wiki.seeedstudio.com/Seeeduino-XIAO/#enter-bootloader-mode
 
-___________________________________________________
-
+```
 sudo /usr/local/bin/bossac -i -d -p /dev/ttyACM1 -e -w -v -R --offset=0x2000 out/klipper.bin
+```
 
+- Reboot...
 ___________________________________________________
 
-reboot...
-___________________________________________________
-
-Get usb port via putty:
-
+- Get usb port via putty:
+```
 ls /dev/serial/by-id/*
+```
+Should be something like this: /dev/serial/by-id/usb-Klipper_samd21g18a_96FA56235136575020312E30142D15FF-if00
 
-Should be something like this: /dev/serial/by-id/usb-
-
-Klipper_samd21g18a_96FA56235136575020312E30142D15FF-if00
-
-copy it for the printer config
+- Copy it for the printer config
 
 ___________________________________________________
 
 Edit printer.cfg:
-
+```
 [mcu xiao]
 
 serial: : /dev/serial/by-id/usb-Klipper_samd21g18a_96FA56235136575020312E30142D15FF-if00
 
 [samd_sercom my_sercom]
-
 sercom: sercom0
-
 tx_pin: xiao:PA6
-
 rx_pin: xiao:PA5
-
 clk_pin: xiao:PA7
 
-
-
 [adxl345]
-
-
 cs_pin: xiao:PB9
 
-
-
 [resonance_tester]
-
 accel_chip: adxl345
-
 probe_points:
-
    55,55,20
-
+```
 ___________________________________________________
 
 XIAO hardware connection:
