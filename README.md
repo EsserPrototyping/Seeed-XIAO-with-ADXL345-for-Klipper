@@ -8,20 +8,20 @@ With the XIAO as MCU, longer USB cables can be used and the connection to the AD
 
 
 # Klipper ADXL installation:
+
+Original instructions... https://www.klipper3d.org/Measuring_Resonances.html
+
 If you already configured Input Shaper with your PI, you can skip this part.
 
-Via Putty:
-
+- Via Putty:
 ```
 ~/klippy-env/bin/pip install -v numpy
-
 sudo apt update
 sudo apt install python3-numpy python3-matplotlib
 ```
 
 ..instead of the PI as MCU, we will configure the XIAO
 
-Original instructions... https://www.klipper3d.org/Measuring_Resonances.html
 ___________________________________________________
 
 
@@ -30,8 +30,7 @@ ___________________________________________________
 
 Original instructions... https://github.com/Tircown/ERCF-easy-brd
 
-Install bossac (version =1.8):
-
+- Install bossac (version =1.8):
 ```
 sudo apt install libreadline-dev libwxgtk3.0-*
 git clone https://github.com/shumatech/BOSSA.git
@@ -40,7 +39,7 @@ make
 sudo cp bin/bossac /usr/local/bin
 ```
 
-Prepare the firmware:
+- Prepare the firmware:
 ```
 cd ~/klipper
 make menuconfig
@@ -105,16 +104,11 @@ ___________________________________________________
 
 # XIAO hardware connection:
 
-XIAO			ADXL
-
-GND		black	GND
-
-3V 		red	VCC
-
-10 (MOSI) 		white	SDA
-
-9 (MISO) 		yellow	SDO
-
-8 (SCK) 		brown	SCL
-
-7 (CS) 		green	CS
+| XIAO | wire | ADXL |
+|---|---|---|
+| GND	| black	| GND |
+| 3V | red| VCC |
+| 10 (MOSI) | white	| SDA |
+| 9 (MISO) | yellow	| SDO |
+| 8 (SCK) | brown	| SCL |
+| 7 (CS) | green	| CS | 
