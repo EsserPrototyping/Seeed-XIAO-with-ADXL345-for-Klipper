@@ -68,7 +68,7 @@ sudo /usr/local/bin/bossac -i -d -p /dev/ttyACM1 -e -w -v -R --offset=0x2000 out
 - Reboot PI...
 ___________________________________________________
 
-- Get serial port via putty:
+- Get serial port via Putty:
 ```
 ls /dev/serial/by-id/*
 ```
