@@ -11,10 +11,12 @@ With the XIAO as MCU, longer USB cables can be used and the connection to the AD
 
 Via Putty:
 
-> ~/klippy-env/bin/pip install -v numpy
+```
+~/klippy-env/bin/pip install -v numpy
 
-> sudo apt update
-> sudo apt install python3-numpy python3-matplotlib
+sudo apt update
+sudo apt install python3-numpy python3-matplotlib
+```
 
 ..instead of the PI as MCU, we will configure the XIAO
 
