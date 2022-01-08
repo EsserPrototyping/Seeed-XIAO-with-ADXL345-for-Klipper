@@ -115,6 +115,7 @@ ___________________________________________________
 
 # Print the case for the XIAO if you want to:
 https://github.com/EsserPrototyping/Seeed-XIAO-with-ADXL345-for-Klipper/tree/main/XIAO_Case_3D
+
 <img src="https://github.com/EsserPrototyping/Seeed-XIAO-with-ADXL345-for-Klipper/blob/main/Images/case.JPG">
 
 ___________________________________________________
