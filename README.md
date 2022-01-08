@@ -109,3 +109,9 @@ ___________________________________________________
 | 9 (MISO) | SDO |
 | 8 (SCK) | SCL |
 | 7 (CS) | CS | 
+
+<img src="https://github.com/EsserPrototyping/Seeed-XIAO-with-ADXL345-for-Klipper/blob/main/Images/xiao.JPG">
+<img src="https://github.com/EsserPrototyping/Seeed-XIAO-with-ADXL345-for-Klipper/blob/main/Images/adxl.JPG">
+
+# Print a case for the XIAO if you want to:
+<img src="https://github.com/EsserPrototyping/Seeed-XIAO-with-ADXL345-for-Klipper/blob/main/Images/case.JPG">
