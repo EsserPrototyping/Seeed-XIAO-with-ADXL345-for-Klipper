@@ -65,6 +65,7 @@ ___________________________________________________
 More informations on how to reset for flashing:
 https://wiki.seeedstudio.com/Seeeduino-XIAO/#enter-bootloader-mode
 
+- Flash XIAO via Putty:
 ```
 sudo /usr/local/bin/bossac -i -d -p /dev/ttyACM1 -e -w -v -R --offset=0x2000 out/klipper.bin
 ```
