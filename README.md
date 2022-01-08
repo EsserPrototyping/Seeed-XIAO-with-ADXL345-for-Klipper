@@ -101,11 +101,11 @@ ___________________________________________________
 
 # XIAO hardware connection:
 
-| XIAO | wire | ADXL |
-|---|---|---|
-| GND	| black	| GND |
-| 3V | red| VCC |
-| 10 (MOSI) | white	| SDA |
-| 9 (MISO) | yellow	| SDO |
-| 8 (SCK) | brown	| SCL |
-| 7 (CS) | green	| CS | 
+| XIAO | ADXL |
+|---|---|
+| GND	| GND |
+| 3V | VCC |
+| 10 (MOSI) | SDA |
+| 9 (MISO) | SDO |
+| 8 (SCK) | SCL |
+| 7 (CS) | CS | 
