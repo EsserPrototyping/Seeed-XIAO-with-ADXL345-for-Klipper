@@ -83,10 +83,9 @@ Should be something like this: /dev/serial/by-id/usb-Klipper_samd21g18a_96FA5623
 
 ___________________________________________________
 
-Edit printer.cfg:
+# Edit printer.cfg:
 ```
 [mcu xiao]
-
 serial: : /dev/serial/by-id/usb-Klipper_samd21g18a_96FA56235136575020312E30142D15FF-if00
 
 [samd_sercom my_sercom]
@@ -105,13 +104,18 @@ probe_points:
 ```
 ___________________________________________________
 
-XIAO hardware connection:
+# XIAO hardware connection:
 
 XIAO			ADXL
 
 GND		black	GND
+
 3V 		red	VCC
+
 10 (MOSI) 		white	SDA
+
 9 (MISO) 		yellow	SDO
+
 8 (SCK) 		brown	SCL
+
 7 (CS) 		green	CS
