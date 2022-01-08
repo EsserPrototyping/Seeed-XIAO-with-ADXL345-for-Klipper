@@ -8,6 +8,7 @@ With the XIAO as MCU, longer USB cables can be used and the connection to the AD
 
 
 # Klipper ADXL installation:
+If you already configured Input Shaper with your PI, you can skip this part.
 
 Via Putty:
 
@@ -39,14 +40,12 @@ make
 sudo cp bin/bossac /usr/local/bin
 ```
 
-
 Prepare the firmware:
 ```
 cd ~/klipper
 make menuconfig
 ```
 ___________________________________________________
-
 - uncheck extra low-level options
 - Architecture: SAMD21/SAMD51
 - Processor: SAMD21G18 (Arduino Zero)
@@ -70,17 +69,16 @@ https://wiki.seeedstudio.com/Seeeduino-XIAO/#enter-bootloader-mode
 sudo /usr/local/bin/bossac -i -d -p /dev/ttyACM1 -e -w -v -R --offset=0x2000 out/klipper.bin
 ```
 
-- Reboot...
+- Reboot PI...
 ___________________________________________________
 
-- Get usb port via putty:
+- Get serial port via putty:
 ```
 ls /dev/serial/by-id/*
 ```
 Should be something like this: /dev/serial/by-id/usb-Klipper_samd21g18a_96FA56235136575020312E30142D15FF-if00
 
 - Copy it for the printer config
-
 ___________________________________________________
 
 # Edit printer.cfg:
