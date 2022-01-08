@@ -19,9 +19,7 @@ If you already configured Input Shaper with your PI, you can skip this part.
 sudo apt update
 sudo apt install python3-numpy python3-matplotlib
 ```
-
 ..instead of the PI as MCU, we will configure the XIAO
-
 ___________________________________________________
 
 
@@ -38,7 +36,6 @@ cd BOSSA
 make
 sudo cp bin/bossac /usr/local/bin
 ```
-
 - Prepare the firmware:
 ```
 cd ~/klipper
@@ -68,7 +65,6 @@ https://wiki.seeedstudio.com/Seeeduino-XIAO/#enter-bootloader-mode
 ```
 sudo /usr/local/bin/bossac -i -d -p /dev/ttyACM1 -e -w -v -R --offset=0x2000 out/klipper.bin
 ```
-
 - Reboot PI...
 ___________________________________________________
 
@@ -82,9 +78,10 @@ Should be something like this: /dev/serial/by-id/usb-Klipper_samd21g18a_96FA5623
 ___________________________________________________
 
 # Edit printer.cfg:
+- Change the serial to what you´ve received in the previous step.
 ```
 [mcu xiao]
-serial: : /dev/serial/by-id/usb-Klipper_samd21g18a_96FA56235136575020312E30142D15FF-if00
+serial: /dev/serial/by-id/usb-Klipper_samd21g18a_96FA56235136575020312E30142D15FF-if00
 
 [samd_sercom my_sercom]
 sercom: sercom0
