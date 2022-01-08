@@ -118,5 +118,6 @@ https://github.com/EsserPrototyping/Seeed-XIAO-with-ADXL345-for-Klipper/tree/mai
 <img src="https://github.com/EsserPrototyping/Seeed-XIAO-with-ADXL345-for-Klipper/blob/main/Images/case.JPG">
 
 ___________________________________________________
-# Use it as described her:
+# Use it as described here:
 https://www.klipper3d.org/Measuring_Resonances.html#measuring-the-resonances
+- If you´re using it with different printers, just uncomment the part from the printer.cfg, so mainsail will not throw an error if the XIAO is not connected.
