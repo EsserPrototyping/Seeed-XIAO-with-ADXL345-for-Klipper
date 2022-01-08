@@ -13,10 +13,11 @@ Via Putty:
 
 > ~/klippy-env/bin/pip install -v numpy
 
-sudo apt update
-sudo apt install python3-numpy python3-matplotlib
+> sudo apt update
+> sudo apt install python3-numpy python3-matplotlib
 
 ..instead of the PI as MCU, we will configure the XIAO
+
 Original instructions... https://www.klipper3d.org/Measuring_Resonances.html
 ___________________________________________________
 
