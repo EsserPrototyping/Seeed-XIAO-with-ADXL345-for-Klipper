@@ -1,5 +1,5 @@
 # Seeed-XIAO-with-ADXL345-for-Klipper
-This will use the Seed XIAO MCU instead of the RPI for Input Shaper measurements, so it can be connected to different PI's via USB.
+This will use the Seeed XIAO MCU instead of the RPI for Input Shaper measurements, so it can be connected to different PI's via USB.
 
 I had trouble getting my ADXL345 to run directly on the PI with longer cables (SPI does not like long wires).
 With the XIAO as MCU, longer USB cables can be used and the connection to the ADXL is way shorter.
